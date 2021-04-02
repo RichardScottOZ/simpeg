@@ -122,7 +122,7 @@ plt.show()
 # Assign Uncertainties
 # --------------------
 #
-# Inversion with SimPEG requires that we define standard deviation on our data.
+# Inversion with SimPEG requires that we define the standard deviation of our data.
 # This represents our estimate of the noise in our data. For gravity inversion,
 # a constant floor value is generally applied to all data. For this tutorial,
 # the standard deviation on each datum will be 1% of the maximum observed
@@ -137,7 +137,7 @@ uncertainties = 0.01 * maximum_anomaly * np.ones(np.shape(dobs))
 # Defining the Survey
 # -------------------
 #
-# Here, we define survey that will be used for this tutorial. Gravity
+# Here, we define the survey that will be used for this tutorial. Gravity
 # surveys are simple to create. The user only needs an (N, 3) array to define
 # the xyz locations of the observation locations. From this, the user can
 # define the receivers and the source field.
@@ -195,7 +195,7 @@ mesh = TensorMesh([hx, hy, hz], "CCN")
 # not converge.
 background_density = 1e-6
 
-# Find the indecies of the active cells in forward model (ones below surface)
+# Find the indices of the active cells in forward model (ones below surface)
 ind_active = surface2ind_topo(mesh, xyz_topo)
 
 # Define mapping from model to active cells
