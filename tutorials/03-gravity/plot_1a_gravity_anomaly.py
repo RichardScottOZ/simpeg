@@ -54,9 +54,9 @@ xyz_topo = np.c_[x_topo, y_topo, z_topo]
 # Defining the Survey
 # -------------------
 #
-# Here, we define survey that will be used for the forward simulation. Gravity
+# Here, we define the survey that will be used for the forward simulation. Gravity
 # surveys are simple to create. The user only needs an (N, 3) array to define
-# the xyz locations of the observation locations, and a list of field components
+# the xyz locations of the observations, and a list of field components
 # which are to be measured.
 #
 
@@ -125,7 +125,7 @@ model_map = maps.IdentityMap(nP=nC)
 # Define model. Models in SimPEG are vector arrays.
 model = background_density * np.ones(nC)
 
-# You could find the indicies of specific cells within the model and change their
+# You could find the indices of specific cells within the model and change their
 # value to add structures.
 ind_block = (
     (mesh.gridCC[ind_active, 0] > -50.0)
@@ -188,7 +188,7 @@ simulation = gravity.simulation.Simulation3DIntegral(
     store_sensitivities="forward_only",
 )
 
-# Compute predicted data for some model
+# Compute predicted data for the model
 dpred = simulation.dpred(model)
 
 # Plot
