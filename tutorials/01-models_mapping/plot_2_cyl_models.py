@@ -4,7 +4,7 @@ Cylindrical Meshes
 
 Cylindrical meshes are useful when the geological problem demonstrates
 rotational symmetry. In this case, we need only define how the model changes
-as a funcion of the radial distance and elevation; thus limiting the number
+as a function of the radial distance and elevation; thus limiting the number
 of model parameters. Here we demonstrate various ways that models can be
 defined and mapped to cylindrical meshes. Some things we consider are:
 
