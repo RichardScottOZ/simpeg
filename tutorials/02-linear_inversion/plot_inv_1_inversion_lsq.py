@@ -70,7 +70,7 @@ ax.set_ylim([-2, 2])
 # Defining the Linear Operator
 # ----------------------------
 #
-# Here we define the linear operator with dimensions (nData, nParam). In practive,
+# Here we define the linear operator with dimensions (nData, nParam). In practice,
 # you may have a problem-specific linear operator which you would like to construct
 # or load here.
 #
